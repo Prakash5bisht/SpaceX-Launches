@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SpaceX Launch Tracker</string>
+    <string name="home">Home</string>
+    <string name="store">Store</string>
+    <string name="search">Search</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back_icon">Back Icon</string>
+    <string name="media_links">Media Links</string>
+    <string name="launch_details">Launch Details</string>
+    <string name="no_data_found">No Data Found !</string>
+    <string name="spacex_launches">SpaceX Launches</string>
+</resources>

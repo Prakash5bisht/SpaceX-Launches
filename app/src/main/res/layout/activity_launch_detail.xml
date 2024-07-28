@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black6"
+    tools:context=".activity.LaunchDetailActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/dimen_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dimen_20" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/dimen_20" />
+
+            <TextView
+                android:id="@+id/tvMissionName"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/font_16"
+                android:fontFamily="@font/manrope_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_20"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Mission Name" />
+
+            <TextView
+                android:id="@+id/tvLaunchDate"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:fontFamily="@font/manrope_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_20"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvMissionName"
+                tools:text="Launch Date" />
+
+            <TextView
+                android:id="@+id/tvRocketInfoTitle"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:fontFamily="@font/manrope_medium"
+                android:text="Rocket Info:-"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvLaunchDate" />
+
+            <TextView
+                android:id="@+id/tvRocketName"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:fontFamily="@font/manrope_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvRocketInfoTitle"
+                tools:text="Rocket Name" />
+
+            <TextView
+                android:id="@+id/tvRocketType"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:fontFamily="@font/manrope_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvRocketName"
+                tools:text="Rocket Type" />
+
+            <TextView
+                android:id="@+id/tvPayloadDetails"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:fontFamily="@font/manrope_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvRocketType"
+                tools:text="Payload Details" />
+
+            <LinearLayout
+                android:id="@+id/llPayloadDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvPayloadDetails" />
+
+            <TextView
+                android:id="@+id/tvLaunchSite"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:fontFamily="@font/manrope_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/llPayloadDetails"
+                tools:text="Launch Site" />
+
+            <TextView
+                android:id="@+id/tvMediaLinksTitle"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:fontFamily="@font/manrope_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvLaunchSite"
+                tools:text="Media Links" />
+
+            <TextView
+                android:id="@+id/tvMissionPatchLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:fontFamily="@font/manrope_regular"
+                android:textColor="@color/blue1"
+                android:textSize="@dimen/font_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvMediaLinksTitle"
+                tools:text="https://dummy.com"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvRedditMediaLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:fontFamily="@font/manrope_regular"
+                android:textColor="@color/blue1"
+                android:textSize="@dimen/font_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvMissionPatchLink"
+                tools:text="https://dummy.com"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvArticleLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:fontFamily="@font/manrope_regular"
+                android:textColor="@color/blue1"
+                android:textSize="@dimen/font_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvRedditMediaLink"
+                tools:text="https://dummy.com"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvWikipediaLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:fontFamily="@font/manrope_regular"
+                android:textColor="@color/blue1"
+                android:textSize="@dimen/font_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvArticleLink"
+                tools:text="https://dummy.com"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvVideoLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:fontFamily="@font/manrope_regular"
+                android:textColor="@color/blue1"
+                android:textSize="@dimen/font_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvWikipediaLink"
+                tools:text="https://dummy.com"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

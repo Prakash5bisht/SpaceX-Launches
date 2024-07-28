@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:background="@color/black6">
+
+    <TextView
+        android:id="@+id/tvMissionName"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_medium"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mission Name" />
+
+    <TextView
+        android:id="@+id/tvLaunchYear"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:fontFamily="@font/manrope_medium"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMissionName"
+        tools:text="Launch year" />
+
+    <TextView
+        android:id="@+id/tvRocketName"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:fontFamily="@font/manrope_medium"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLaunchYear"
+        tools:text="Rocket Name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

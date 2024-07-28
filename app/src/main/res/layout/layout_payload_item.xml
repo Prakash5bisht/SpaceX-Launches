@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black6"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvPayloadId"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_12"
+        android:fontFamily="@font/manrope_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Payload Id:- " />
+
+    <TextView
+        android:id="@+id/tvPayloadNationality"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:fontFamily="@font/manrope_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPayloadId"
+        tools:text="Nationality:- " />
+
+    <TextView
+        android:id="@+id/tvPayloadCustomers"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:fontFamily="@font/manrope_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPayloadNationality"
+        tools:text="Customers:- " />
+
+    <TextView
+        android:id="@+id/tvPayloadManufacturer"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:fontFamily="@font/manrope_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPayloadCustomers"
+        tools:text="Manufacturer:- " />
+
+    <TextView
+        android:id="@+id/tvPayloadType"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:fontFamily="@font/manrope_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPayloadManufacturer"
+        tools:text="Type:- " />
+
+    <TextView
+        android:id="@+id/tvPayloadMass"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:fontFamily="@font/manrope_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPayloadType"
+        tools:text="Mass:- " />
+
+    <TextView
+        android:id="@+id/tvPayloadOrbit"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:fontFamily="@font/manrope_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPayloadMass"
+        tools:text="Orbit:- " />
+
+    <View
+        android:id="@+id/sepLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPayloadOrbit"
+        android:layout_marginTop="@dimen/dimen_8"
+        app:layout_goneMarginTop="@dimen/dimen_8"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
