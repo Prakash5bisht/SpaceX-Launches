@@ -9,4 +9,12 @@
     <string name="launch_details">Launch Details</string>
     <string name="no_data_found">No Data Found !</string>
     <string name="spacex_launches">SpaceX Launches</string>
+    <string name="payload_details">Payload Details</string>
+    <string name="payload_id">"Payload Id:- "</string>
+    <string name="nationality">"Nationality:- "</string>
+    <string name="customers">"Customers:- "</string>
+    <string name="manufacturer">"Manufacturer:- "</string>
+    <string name="type">"Type:- "</string>
+    <string name="orbit">"Orbit:- "</string>
+    <string name="launch_site">"Launch Site:- "</string>
 </resources>

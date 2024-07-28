@@ -9,7 +9,6 @@ import androidx.core.view.isVisible
 import com.example.spacexlaunchtracker.Constants
 import com.example.spacexlaunchtracker.R
 import com.example.spacexlaunchtracker.databinding.ActivityLaunchDetailBinding
-import com.example.spacexlaunchtracker.databinding.LayoutMediaLinkItemBinding
 import com.example.spacexlaunchtracker.databinding.LayoutPayloadItemBinding
 import com.example.spacexlaunchtracker.model.LaunchSite
 import com.example.spacexlaunchtracker.model.Links
@@ -41,7 +40,7 @@ class LaunchDetailActivity : AppCompatActivity() {
     }
 
     private fun fetchExtras(){
-        spaceXLaunchDetail = intent.getParcelableExtra<SpaceXLaunchesResponse>(Constants.SPACE_X_LAUNCH_DETAIL)
+        spaceXLaunchDetail = intent.getParcelableExtra(Constants.SPACE_X_LAUNCH_DETAIL)
     }
 
     private fun setUpUi(){
@@ -64,33 +63,33 @@ class LaunchDetailActivity : AppCompatActivity() {
 
     private fun setPayloadDetails(payloadsList: List<Payloads>?){
         if(!payloadsList.isNullOrEmpty()){
-            launchDetailBinding.tvPayloadDetails.text = "Payload Details"
+            launchDetailBinding.tvPayloadDetails.text = getString(R.string.payload_details)
             launchDetailBinding.llPayloadDetails.removeAllViews()
             payloadsList.forEachIndexed { index, payload->
                 val payloadItemBinding = LayoutPayloadItemBinding.inflate(layoutInflater)
                 if(!payload.payloadId.isNullOrEmpty()){
-                    payloadItemBinding.tvPayloadId.text = "Payload Id:- ".plus(payload.payloadId)
+                    payloadItemBinding.tvPayloadId.text = getString(R.string.payload_id).plus(payload.payloadId)
                 }else{
                     payloadItemBinding.tvPayloadId.isVisible = false
                 }
                 if(!payload.nationality.isNullOrEmpty()){
-                    payloadItemBinding.tvPayloadNationality.text = "Nationality:- ".plus(payload.nationality)
+                    payloadItemBinding.tvPayloadNationality.text = getString(R.string.nationality).plus(payload.nationality)
                 }else{
                     payloadItemBinding.tvPayloadNationality.isVisible = false
                 }
                 if(!payload.customers.isNullOrEmpty()){
                     val customers = payload.customers.joinToString(", ")
-                    payloadItemBinding.tvPayloadCustomers.text = "Customers:- ".plus(customers)
+                    payloadItemBinding.tvPayloadCustomers.text = getString(R.string.customers).plus(customers)
                 }else{
                     payloadItemBinding.tvPayloadCustomers.isVisible = false
                 }
                 if(!payload.manufacturer.isNullOrEmpty()){
-                    payloadItemBinding.tvPayloadManufacturer.text = "Manufacturer:- ".plus(payload.manufacturer)
+                    payloadItemBinding.tvPayloadManufacturer.text = getString(R.string.manufacturer).plus(payload.manufacturer)
                 }else{
                     payloadItemBinding.tvPayloadManufacturer.isVisible = false
                 }
                 if(!payload.payloadType.isNullOrEmpty()){
-                    payloadItemBinding.tvPayloadType.text = "Type:- ".plus(payload.payloadType)
+                    payloadItemBinding.tvPayloadType.text = getString(R.string.type).plus(payload.payloadType)
                 }else{
                     payloadItemBinding.tvPayloadType.isVisible = false
                 }
@@ -104,7 +103,7 @@ class LaunchDetailActivity : AppCompatActivity() {
                     payloadItemBinding.tvPayloadMass.isVisible = false
                 }
                 if(!payload.orbit.isNullOrEmpty()){
-                    payloadItemBinding.tvPayloadOrbit.text = "Orbit:- ".plus(payload.orbit)
+                    payloadItemBinding.tvPayloadOrbit.text = getString(R.string.orbit).plus(payload.orbit)
                 }else{
                     payloadItemBinding.tvPayloadOrbit.isVisible = false
                 }
@@ -120,7 +119,7 @@ class LaunchDetailActivity : AppCompatActivity() {
 
     private fun setLaunchSite(launchSite: LaunchSite?) {
         if(launchSite != null && launchSite.siteName.isNullOrEmpty()){
-            launchDetailBinding.tvLaunchSite.text = "Launch Site:- ".plus(launchSite.siteName?:"")
+            launchDetailBinding.tvLaunchSite.text = getString(R.string.launch_site).plus(launchSite.siteName?:"")
         }else{
             launchDetailBinding.tvLaunchSite.isVisible = false
         }

@@ -2,8 +2,6 @@ package com.example.spacexlaunchtracker.fragment
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +9,6 @@ import androidx.core.view.isVisible
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.activityViewModels
 import com.example.spacexlaunchtracker.Constants
-import com.example.spacexlaunchtracker.R
 import com.example.spacexlaunchtracker.activity.LaunchDetailActivity
 import com.example.spacexlaunchtracker.adapter.SpaceXLaunchesAdapter
 import com.example.spacexlaunchtracker.base.BaseFragment

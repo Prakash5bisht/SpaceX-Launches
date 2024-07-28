@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import com.example.spacexlaunchtracker.Constants
 import com.example.spacexlaunchtracker.R
 import com.example.spacexlaunchtracker.activity.LaunchDetailActivity
